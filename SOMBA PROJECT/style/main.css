@@ -1,13 +1,21 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto);
 
-/* body {
-    background: #009688;
-} */
+/*	Reset & General
+---------------------------------------------------------------------- */
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    font-family: "Open Sans", sans-serif;
+}
 
 .wrapper {
     height: 100%;
     transition: all 300ms ease-in-out;
-    margin: 1em 0;
+    margin: 0;
     padding: 0;
 }
 
@@ -26,7 +34,7 @@
 .menu div {
     margin: 1em;
     padding-bottom: 1em;
-    border-bottom: 1px solid rgb(108, 228, 218);
+    border-bottom: 1px solid rgb(108, 180, 228);
 }
 
 .menu a {
@@ -45,10 +53,10 @@
 .menu--off {
     position: absolute;
     left: -50%;
-    width: 50%;
+    width: 20%;
     display: block;
-    background: rgb(110, 179, 133);
-    min-height: 600px;
+    background-color: rgb(255, 240, 227);
+    min-height: 500px;
     height: 125%;
     margin-top: 1em;
     transition: all 300ms;
@@ -56,7 +64,7 @@
 
 .menu--on {
     left: 0;
-    box-shadow: 8px 8px 20px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 4px 4px 10px 0 rgba(0, 0, 0, 0.2);
     transition: all 300ms;
 }
 
@@ -68,15 +76,16 @@
 }
 
 .material-design-hamburger__icon {
-    padding: 3rem 1rem;
+    padding: 1em 0;
+    margin-right: 3em;
     cursor: pointer;
 }
 
 .material-design-hamburger__layer {
     display: block;
-    width: 100px;
-    height: 10px;
-    background: rgb(89, 187, 71);
+    width: 20px;
+    height: 2px;
+    background: rgb(108, 180, 228);
     position: relative;
     animation-duration: 300ms;
     animation-timing-function: ease-in-out;
@@ -86,7 +95,7 @@
 .material-design-hamburger__layer:after {
     display: block;
     width: inherit;
-    height: 10px;
+    height: 2px;
     position: absolute;
     background: inherit;
     left: 0;
@@ -178,4 +187,453 @@
         width: 75%;
     }
     100% {}
+}
+
+.carousel-item {
+    height: 70vh;
+    background-image: url(../assets/img/photo1.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.carousel-item.slider--2 {
+    background-image: url(../assets/img/photo2.jpg);
+}
+
+.carousel-item.slider--3 {
+    background-image: url(../assets/img/photo3.jpg);
+}
+
+.f-inl2 {
+    width: 50%;
+    margin: 0 auto;
+}
+
+.f-inl3 {
+    display: none;
+}
+
+.form-inline .form-control {
+    display: inline-block;
+    width: 80%;
+    vertical-align: middle;
+}
+
+
+/* footer*/
+
+
+/* STYLES SPECIFIC TO FOOTER  */
+
+.footer {
+    width: 100%;
+    position: relative;
+    height: auto;
+    background-color: rgba(13, 2, 53, 0.877);
+}
+
+.footer .col {
+    width: 190px;
+    height: auto;
+    float: left;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    padding: 0px 20px 20px 20px;
+}
+
+.footer .col h1 {
+    margin: 0;
+    padding: 0;
+    font-family: inherit;
+    font-size: 12px;
+    line-height: 17px;
+    padding: 20px 0px 5px 0px;
+    color: rgb(134, 125, 125);
+    font-weight: normal;
+    text-transform: uppercase;
+    letter-spacing: 0.250em;
+}
+
+.footer .col ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.footer .col ul li {
+    color: rgba(255, 255, 255, 0.493);
+    font-size: 14px;
+    font-family: inherit;
+    font-weight: bold;
+    padding: 5px 0px 5px 0px;
+    cursor: pointer;
+    transition: .2s;
+    -webkit-transition: .2s;
+    -moz-transition: .2s;
+}
+
+.social ul li {
+    display: inline-block;
+    padding-right: 5px !important;
+}
+
+.footer .col ul li:hover {
+    color: #ffffff;
+    transition: .1s;
+    -webkit-transition: .1s;
+    -moz-transition: .1s;
+}
+
+.clearfix {
+    clear: both;
+}
+
+@media only screen and (min-width: 1280px) {
+    .contain {
+        width: 1200px;
+        margin: 0 auto;
+    }
+}
+
+@media only screen and (max-width: 1139px) {
+    .contain .social {
+        width: 1000px;
+        display: block;
+    }
+    .social h1 {
+        margin: 0px;
+    }
+}
+
+@media only screen and (max-width: 950px) {
+    .footer .col {
+        width: 33%;
+    }
+    .footer .col h1 {
+        font-size: 14px;
+    }
+    .footer .col ul li {
+        font-size: 13px;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .footer .col {
+        width: 50%;
+    }
+    .footer .col h1 {
+        font-size: 14px;
+    }
+    .footer .col ul li {
+        font-size: 13px;
+    }
+}
+
+@media only screen and (max-width: 340px) {
+    .footer .col {
+        width: 100%;
+    }
+}
+
+
+/* Footer Right */
+
+.footer-distributed .footer-right {
+    width: 30%;
+}
+
+.footer-distributed .footer-company-about {
+    line-height: 20px;
+    color: #92999f;
+    font-size: 13px;
+    font-weight: normal;
+    margin: 0;
+}
+
+.footer-distributed .footer-company-about span {
+    display: block;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.footer-distributed .footer-icons {
+    margin-top: 25px;
+}
+
+.footer-distributed .footer-icons a {
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+    background-color: #99121d;
+    border-radius: 2px;
+    font-size: 20px;
+    color: #ffffff;
+    text-align: center;
+    line-height: 35px;
+    margin-right: 3px;
+    margin-bottom: 5px;
+}
+
+
+/* Here is the code for Responsive Footer */
+
+
+/* You can remove below code if you don't want Footer to be responsive */
+
+@media (max-width: 880px) {
+    .footer-distributed .footer-left,
+    .footer-distributed .footer-center,
+    .footer-distributed .footer-right {
+        display: block;
+        width: 100%;
+        margin-bottom: 40px;
+        text-align: center;
+    }
+    .footer-distributed .footer-center i {
+        margin-left: 0;
+    }
+}
+
+
+/* Jumbotron promo */
+
+.wide-promo {
+    height: 360px;
+    background-image: url(../assets/img/promo3.png);
+    background-size: cover;
+    background-position: center;
+    border: 1px solid rgb(221, 219, 219);
+}
+
+.wide-promo--1 {
+    background-image: url(../assets/img/promo2.png);
+}
+
+
+/* Color palette */
+
+
+/* CSS - Cascading Style Sheet */
+
+
+/* Palette color codes */
+
+
+/* Palette URL: http://paletton.com/#uid=7060u0kFccSvg88DJ9VBOjtEyqu */
+
+
+/* Feel free to copy&paste color codes to your application */
+
+
+/* As hex codes */
+
+.color-primary-0 {
+    color: #670E00
+}
+
+
+/* Main Primary color */
+
+.color-primary-1 {
+    color: #410A02
+}
+
+.color-primary-2 {
+    color: #4F0B00
+}
+
+.color-primary-3 {
+    color: #9B1500
+}
+
+.color-primary-4 {
+    color: #D31D00
+}
+
+.color-secondary-1-0 {
+    color: #673400
+}
+
+
+/* Main Secondary color (1) */
+
+.color-secondary-1-1 {
+    color: #412102
+}
+
+.color-secondary-1-2 {
+    color: #4F2800
+}
+
+.color-secondary-1-3 {
+    color: #9B4E00
+}
+
+.color-secondary-1-4 {
+    color: #D36B00
+}
+
+.color-secondary-2-0 {
+    color: #013240
+}
+
+
+/* Main Secondary color (2) */
+
+.color-secondary-2-1 {
+    color: #022028
+}
+
+.color-secondary-2-2 {
+    color: #012731
+}
+
+.color-secondary-2-3 {
+    color: #034C60
+}
+
+.color-secondary-2-4 {
+    color: #036783
+}
+
+.color-complement-0 {
+    color: #004C17
+}
+
+
+/* As RGBa codes */
+
+.rgba-primary-0 {
+    color: rgba(103, 14, 0, 1)
+}
+
+
+/* Main Primary color */
+
+.rgba-primary-1 {
+    color: rgba( 65, 10, 2, 1)
+}
+
+.rgba-primary-2 {
+    color: rgba( 79, 11, 0, 1)
+}
+
+.rgba-primary-3 {
+    color: rgba(155, 21, 0, 1)
+}
+
+.rgba-primary-4 {
+    color: rgba(211, 29, 0, 1)
+}
+
+.rgba-secondary-1-0 {
+    color: rgba(103, 52, 0, 1)
+}
+
+
+/* Main Secondary color (1) */
+
+.rgba-secondary-1-1 {
+    color: rgba( 65, 33, 2, 1)
+}
+
+.rgba-secondary-1-2 {
+    color: rgba( 79, 40, 0, 1)
+}
+
+.rgba-secondary-1-3 {
+    color: rgba(155, 78, 0, 1)
+}
+
+.rgba-secondary-1-4 {
+    color: rgba(211, 107, 0, 1)
+}
+
+.rgba-secondary-2-0 {
+    color: rgba( 1, 50, 64, 1)
+}
+
+
+/* Main Secondary color (2) */
+
+.rgba-secondary-2-1 {
+    color: rgba( 2, 32, 40, 1)
+}
+
+.rgba-secondary-2-2 {
+    color: rgba( 1, 39, 49, 1)
+}
+
+.rgba-secondary-2-3 {
+    color: rgba( 3, 76, 96, 1)
+}
+
+.rgba-secondary-2-4 {
+    color: rgba( 3, 103, 131, 1)
+}
+
+
+/* Generated by Paletton.com © 2002-2014 */
+
+
+/* http://paletton.com */
+
+
+/* Responsiveness */
+
+
+/* Navigation Bar */
+
+@media (max-width:930px) {
+    .f-inl2 {
+        display: none;
+    }
+    .f-inl3 {
+        display: block;
+        width: 100%;
+        margin: 0 auto;
+    }
+    .navbar .navbar-brand {
+        margin-right: auto;
+    }
+    h1 {
+        font-size: 16px;
+    }
+    h3.d-inline-block {
+        font-size: 26px;
+    }
+}
+
+@media (max-width:600px) {
+    .navbar,
+    .form-control,
+    .btn {
+        font-size: 12px;
+    }
+    .wide-promo {
+        height: 180px;
+    }
+    h3.d-inline-block {
+        font-size: 20px;
+    }
+}
+
+@media (max-width:339px) {
+    .navbar,
+    .form-control,
+    .btn {
+        font-size: 8px;
+    }
+    .f-inl3 {
+        display: block;
+        width: 30%;
+        margin: 0;
+    }
+    .form-inline {
+        width: 100%;
+    }
 }
